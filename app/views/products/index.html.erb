@@ -5,7 +5,7 @@
 <tr><p>Product: <%= product.name %></p></tr>
 <%= link_to "Product Item", "/products/#{product.id}" %>
 <tr><p>Description: <%= product.description %></p></tr>
-<tr><p>Price: <%= product.price_in_cents %></p></tr>
+<tr><p>Price: <%= product.formatted_price %></p></tr>
 ---------------------------
 <% end %>
 </table>
