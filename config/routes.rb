@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'sessions#new'
   # get 'reviews/show'
 
   # get 'reviews/create'
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
 
   # get 'users/create'
 
-  # resources :products
+  resources :products
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy]
 
