@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+* {
+	font-family: Arial;
+}
+
+#titlerain {
+	font-family: 'Oswald', sans-serif;
+	color: #CEECF5;
+	font-size: 80px;
+	margin: 0px;
+	text-align: center;
+	text-shadow: -2px 2px 0 #6E6E6E;
+}

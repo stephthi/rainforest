@@ -2,27 +2,34 @@
 <html>
 <head>
   <title>Rainforest</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head>
-<body>
-	<% if flash[:notice] %>
+
+  <% if flash[:notice] %>
       <p id="notice"><%= flash[:notice] %></p>
     <% end %>
     <% if flash[:alert] %>
       <p id="alert"><%= flash[:alert] %></p>
     <% end %>
 
-    	<p class="userinfo">
+      <p class="userinfo">
       <% if current_user %>
-        Signed in as <%= current_user.name %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+        Signed in as <%= current_user.name %>. <%= link_to "Log Out", session_path("current"), :method => :delete %>.
       <% else %>
         <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
       <% end %>
+
+      <h1 id='titlerain'>RAINFOREST</h1>
     </p>
 
-    <%= link_to "All Products", "/products" %>
+    <%= link_to "All Products", "/products" %> | <%= link_to "Add A Product", "/products/new" %>
+</head>
+<body>
+
+
 		<%= yield %>
 
 
