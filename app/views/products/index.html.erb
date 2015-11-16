@@ -3,8 +3,7 @@
 <table>
 <% @products.each do |product| %>
 <tr><p>Product: <%= product.name %></p></tr>
-<p><%= link_to "Product Item", "/products/#{product.id}" %></p>
-<p><%= link_to "Edit Item", "/products/#{product.id}/edit" %></p>
+<p><%= link_to "Product Item", "/products/#{product.id}" %> | <%= link_to "Edit Item", "/products/#{product.id}/edit" %> | <%= link_to "Delete Item", "/products/#{product.id}", method: "delete" %> </p>
 <tr><p>Description: <%= product.description %></p></tr>
 <tr><p>Price: $<%= product.formatted_price %></p></tr>
 ---------------------------
