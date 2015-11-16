@@ -11,6 +11,7 @@
       <% if review.user != nil %>
         <em> Review by <%= review.user.name %></em>
         Added on: <%= review.created_at %>
+        <p><%= link_to "Edit Review", "/products/#{@product.id}/reviews/#{review.id}/edit" %> | <%= link_to "Delete Review", "/products/#{@product.id}/reviews/#{review.id}", method: "delete" %></p>
         <p>-------------------</p>
       <% end %>
     </p>
