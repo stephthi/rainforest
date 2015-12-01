@@ -1,8 +1,5 @@
 class ProductsController < ApplicationController
 
-  def index
-  	@products = Product.all
-  end
 
   def show
   	@product = Product.find(params[:id])
@@ -52,6 +49,9 @@ class ProductsController < ApplicationController
     else
       Product.all
     end
+
+      @products = @products.order('products.created_at DESC').page(params[:page])
+
      # if request.xhr?
       respond_to do |format|
       format.html
