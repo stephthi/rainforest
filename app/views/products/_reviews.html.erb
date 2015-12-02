@@ -1,0 +1,10 @@
+<% @product.reviews.each do |review| %>
+  <div class="review">
+    <div class="poster">
+      Posted by <%= review.user.name %> on <%= review.created_at %>
+    </div>
+    <p class="comment">
+      <%= review.comment %>
+    </p>
+  </div>
+<% end %>
